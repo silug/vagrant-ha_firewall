@@ -1,0 +1,1 @@
+append INPUT -i eth0 -j ACCEPT
