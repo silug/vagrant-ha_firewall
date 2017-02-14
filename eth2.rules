@@ -1,2 +1,0 @@
-int eth2 trusted nat
-insert nat:POSTROUTING -o eth1 -s 192.168.11.0/255.255.255.0 -j SNAT --to 192.168.10.254
