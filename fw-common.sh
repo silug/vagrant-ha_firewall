@@ -4,6 +4,8 @@ if [ -d /vagrant/sync ] ; then
     vagrantsync=/vagrant/sync
 elif [ -d /home/vagrant/sync ] ; then
     vagrantsync=/home/vagrant/sync
+elif [ -d /vagrant ] ; then
+    vagrantsync=/vagrant
 else
     echo "Can't find sync directory!" >&2
     exit 1
