@@ -6,6 +6,9 @@ vrrp_sync_group group1 {
         external1
         internal1
     }
+    notify_master "/usr/local/sbin/primary-backup.sh primary"
+    notify_backup "/usr/local/sbin/primary-backup.sh backup"
+    notify_fault "/usr/local/sbin/primary-backup.sh fault"
 }
 
 vrrp_instance external1 {

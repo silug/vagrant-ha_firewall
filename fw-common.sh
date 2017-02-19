@@ -60,6 +60,10 @@ sudo systemctl stop NetworkManager.service
 [ -f /var/run/dhclient-eth0.pid ] && sudo pkill dhclient
 sudo systemctl start NetworkManager.service
 
+sudo cp -fv \
+    /usr/share/doc/conntrack-tools*/doc/sync/primary-backup.sh /usr/local/sbin/
+sudo chmod 755 /usr/local/sbin/primary-backup.sh
+
 sudo $vagrantsync/keepalived.conf.sh "$@"
 
 sudo systemctl enable keepalived.service
