@@ -27,6 +27,9 @@ sudo firewall-cmd --zone=internal \
 sudo firewall-cmd --permanent --direct \
     --add-rule ipv4 nat POSTROUTING 0 -o eth1 -j SNAT --to 192.168.10.254
 
+sudo firewall-cmd --permanent --direct \
+    --add-rule ipv4 filter INPUT 0 -i eth0 -p udp --dport 3780 -d 225.0.0.50 -j ACCEPT
+
 sudo firewall-cmd --reload
 
 sudo sed -i \
