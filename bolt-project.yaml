@@ -1,0 +1,11 @@
+---
+name: ha_firewall
+modules:
+- dylanratcliffe/bolt_vagrant
+- puppetlabs/stdlib
+- puppet/network
+- puppet/firewalld
+- herculesteam/augeasproviders_sysctl
+- git: https://github.com/silug/puppet-conntrackd
+  ref: feature_puppet6
+- puppet/keepalived
