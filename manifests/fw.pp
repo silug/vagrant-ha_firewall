@@ -1,11 +1,12 @@
 # @summary Configure a HA firewall
-# @param Helper packages
-# @param Firewall zones to manage
+# @param packages Helper packages
+# @param zones Firewall zones to manage
 # @param if_all Array of interfaces
 # @param if_mgmnt Management interface
 # @param if_external External interface
 # @param if_internal Internal interface
 # @param gateway Gateway IP address
+# @param exposed_ip External NAT IP address
 class ha_firewall::fw (
   Array $packages               = [
     'iptraf-ng',

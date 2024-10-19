@@ -5,7 +5,7 @@ plan ha_firewall (
 ) {
   apply_prep($targets)
   apply($targets) {
-    if $facts['hostname'] =~ /^fw\d/ {
+    if $facts['networking']['hostname'] =~ /^fw\d/ {
       include ha_firewall::fw
     } else {
       include ha_firewall::client

@@ -5,7 +5,6 @@ modules:
 - puppetlabs/stdlib
 - puppet/network
 - puppet/firewalld
-- herculesteam/augeasproviders_sysctl
-- git: https://github.com/silug/puppet-conntrackd
-  ref: feature_puppet6
+- puppet/augeasproviders_sysctl
+- puppet/conntrackd
 - puppet/keepalived
