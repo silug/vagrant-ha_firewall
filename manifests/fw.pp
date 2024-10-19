@@ -55,7 +55,7 @@ class ha_firewall::fw (
     table         => 'filter',
     chain         => 'INPUT',
     priority      => 0,
-    args          => "-o ${if_mgmnt} -p udp --dport 3780 -d 225.0.0.50 -j ACCEPT",
+    args          => "-i ${if_mgmnt} -p udp --dport 3780 -d 225.0.0.50 -j ACCEPT",
   }
 
   ###
@@ -63,8 +63,8 @@ class ha_firewall::fw (
   ###
   class { 'keepalived':
     vrrp_sync_group => {
-      'group1'             => {
-        'group' => [
+      'group1' => {
+        'group'              => [
           'external1',
           'internal1',
         ],

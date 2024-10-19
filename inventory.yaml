@@ -1,3 +1,7 @@
+---
+config:
+  ssh:
+    native-ssh: true
 targets:
   - _plugin: task
     task: bolt_vagrant::targets
